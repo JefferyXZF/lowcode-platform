@@ -1,6 +1,6 @@
 # 快速开始
 
-推荐使用pnpm
+使用pnpm
 
 ```shell
 pnpm install
