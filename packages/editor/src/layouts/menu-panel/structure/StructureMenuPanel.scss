@@ -1,0 +1,49 @@
+.cms-visual-editor-menu-structure {
+  .cms-visual-editor-menu-structure-name {
+    font-size: 12px;
+    line-height: 32px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+
+    .pl-icon {
+      margin-right: 4px;
+      user-select: none;
+    }
+
+    & > div:last-child {
+      flex: 1;
+      user-select: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        content: '';
+        pointer-events: none;
+        opacity: 0.05;
+      }
+    }
+
+    &[data-active] {
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-primary);
+        content: '';
+        opacity: 0.1;
+        pointer-events: none;
+      }
+    }
+  }
+}

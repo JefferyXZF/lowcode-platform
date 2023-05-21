@@ -1,0 +1,33 @@
+.cms-visual-editor-history-panel {
+
+  .cms-visual-editor-history-item {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: background-color linear 300ms;
+
+    &:hover {
+      background-color: #f2f2f2;
+      cursor: pointer;
+    }
+
+    .cms-visual-editor-history-item-time {
+      opacity: 0.75;
+    }
+
+    &[data-active=true] {
+      background-color: var(--color-primary);
+      color: white;
+    }
+  }
+
+  .cms-visual-editor-history-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+}

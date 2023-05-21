@@ -1,0 +1,123 @@
+.cms-visual-editor-menu {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+
+  .cms-visual-editor-menu-side-bar {
+    border-right: solid 1px var(--color-ibc);
+  }
+
+  .cms-visual-editor-menu-body {
+    flex: 1;
+    height: 100%;
+    font-size: 13px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    .cms-visual-editor-menu-search {
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: white;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    .cms-visual-editor-menu-group {
+      .cms-visual-editor-menu-group-name {
+        top: 52px;
+      }
+
+      .cms-visual-editor-menu-list {
+        padding: 8px 8px 0;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.cms-visual-editor-menu-item {
+  display: inline-block;
+  width: calc((100% - 16px) / 3);
+  border: solid 2px var(--color-ibl);
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  transition: border 300ms linear;
+  background-color: white;
+  font-size: 12px;
+  position: relative;
+
+  &:hover, &[data-draggier] {
+    border-color: var(--color-primary);
+    cursor: all-scroll;
+  }
+
+  &:hover {
+    .cms-visual-editor-menu-item-remove-btn {
+      opacity: 1;
+    }
+  }
+
+  &:not(:nth-child(3n)) {
+    margin-right: 8px;
+  }
+
+  .cms-visual-editor-menu-preview-wrapper {
+    padding-bottom: 100%;
+    position: relative;
+
+    .cms-visual-editor-menu-preview-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 16px;
+      box-sizing: border-box;
+
+      .cms-visual-editor-menu-preview-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .cms-visual-editor-menu-item-name {
+    text-align: center;
+    padding: 8px 0;
+    border-top: solid 1px var(--color-ibl);
+    background-color: var(--color-disabled);
+  }
+
+  .cms-visual-editor-menu-item-remove-btn {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    opacity: 0;
+    transition: opacity linear 300ms;
+
+    & > .pl-icon {
+      transform: scale(0.9);
+    }
+  }
+}
