@@ -1,7 +1,10 @@
 <template>
   <router-view />
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { sum } from '@lowcode/editor';
+  console.log(sum(2, 3));
+</script>
 
 <style>
   #app {

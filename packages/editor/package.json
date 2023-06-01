@@ -1,11 +1,18 @@
 {
-  "name": "@jeffery/editor",
+  "name": "@lowcode/editor",
   "type": "module",
   "version": "0.0.13",
   "description": "editor",
   "bin": {
     "create-fast-vue3": "outfile.cjs"
   },
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
   "files": [
     "outfile.cjs"
   ],
